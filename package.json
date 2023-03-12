@@ -1,16 +1,56 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "lavamusic",
+  "version": "3.0.0",
+  "description": "LavaMusic is a music bot for Discord, written in JavaScript using the Discord.js, Typescript, Shoukak (Lavalink) library.",
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run start:bot",
+    "start:bot": "npm run build && node --enable-source-maps dist/index.js",
+    "build": "tsc --project tsconfig.json"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brblacky/lavamusic.git"
+  },
+  "keywords": [
+    "discord",
+    "music",
+    "bot",
+    "lavalink",
+    "shoukaku",
+    "lavamusic",
+    "typescript",
+    "prisma"
+  ],
+  "author": "blacky",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brblacky/lavamusic/issues"
+  },
+  "homepage": "https://github.com/brblacky/lavamusic#readme",
+  "devDependencies": {
+    "@types/node": "^18.14.5",
+    "prisma": "^4.11.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
   "dependencies": {
-    "@types/node": "^18.0.6",
-    "node-fetch": "^3.2.6"
+    "@prisma/client": "^4.11.0",
+    "@types/signale": "^1.4.4",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "shoukaku": "^3.3.1",
+    "signale": "^1.4.0",
+    "undici": "^5.20.0"
+  },
+  "signale": {
+    "displayScope": true,
+    "displayBadge": true,
+    "displayDate": true,
+    "displayFilename": true,
+    "displayLabel": true,
+    "displayTimestamp": true,
+    "underlineLabel": true
   }
 }

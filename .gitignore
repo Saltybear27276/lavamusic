@@ -1,0 +1,13 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+# Ignore all files in the dist folder
+/dist
+
+# Ignore all files in the node_modules folder
+/node_modules
+
+command.ts
+
+commands.json
